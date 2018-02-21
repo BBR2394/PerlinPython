@@ -1,0 +1,3 @@
+le but c'est de créer un programme python qui genere un bruit de perlin
+j'avais fait ca pour le raytracer de tek 1 
+cetait sympa meme si ca ne fonctionnait pas corectement au final ...
