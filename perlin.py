@@ -3,8 +3,13 @@ import random
 
 MasterCloud = []
 
-def extrapol():
+def extrapol(a, b, step):
 	print("nothing yet")
+	toAddToCloud = []
+	for i in range(step):
+		toAddToCloud.append(i)
+	print("dans extrapole", toAddToCloud)
+
 
 def cloudGen(x, y, color, currentStep):
 
@@ -15,14 +20,20 @@ def cloudGen(x, y, color, currentStep):
 		while i < x:
 			#cloud[j].append(random.randrange(255))
 			r = random.randrange(255)
-			#print(r)
-			if currentStep > 1 and i > 0:
-				print("c'est le ", i,  " tours donc je vais extrapoler")
-				extrapol()
+			print(r)
 			cloud[j].append(r)
+			if currentStep > 1 and i > 0:
+				print("le cloud")
+				print(cloud[0])
+				print("c'est le ", i/currentStep,  " tours donc je vais extrapoler")
+				print(i)
+				print(j)
+				print(cloud[j][int(i/currentStep)])
+				res = extrapol(cloud[j][int(i/currentStep)], r, currentStep)
+				#cloud.append
 			i += currentStep
 		i = 0
-		print("bonjour")
+		print("bonjour y")
 	print(cloud)
 	print("toto")
 	MasterCloud.append(cloud)
@@ -42,4 +53,4 @@ def perlinsCloud(x, y, color, step):
 		print("Master cloud step : ", j)
 		print(MasterCloud[j])
 
-perlinsCloud(16, 10, 1, 3)
+perlinsCloud(16, 10, 1, 2)
