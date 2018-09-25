@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import random
+import perlin_extra as extra
+import writeIntoCSV as wif #Wrtie into file
 
 MasterCloud = []
 
@@ -61,7 +63,7 @@ def cloudGen(x, y, color, currentStep):
 	#mixAllTheCloud()
 
 #step is for the master cloud 
-
+#masterCloud store the perlin's cloud ;-)
 def perlinsCloud(x, y, color, step):
 	currentStep = 1
 	for i in range (step):
@@ -76,3 +78,7 @@ def perlinsCloud(x, y, color, step):
 		print(MasterCloud[j])
 
 perlinsCloud(16, 10, 1, 5)
+
+extra.testImportFunction()
+
+wif.writeToFile(MasterCloud, "perlin-out-bis")
