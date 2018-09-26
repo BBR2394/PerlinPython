@@ -82,3 +82,5 @@ perlinsCloud(16, 10, 1, 5)
 extra.testImportFunction()
 
 wif.writeToFile(MasterCloud, "perlin-out-bis")
+
+extra.printTheCloud(MasterCloud)
