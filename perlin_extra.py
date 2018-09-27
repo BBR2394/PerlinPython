@@ -9,12 +9,12 @@ def testImportFunction():
 
 def printTheCloud(cloud):
 	i = 0
-	print("Dans la fonction printTheCloud\n  la fonction qui sert a ca spécifiquement...")
+	print("Dans la fonction printTheCloud\n  la fonction qui sert a ca specifiquement...")
 	print("il y a ", len(cloud), " sous tableau(x)")
 	for i in range (len(cloud)):
 		print("  -> le ", i, "eme")
 		print("   => avec ", len(cloud[i]), " lignes")
 		j = 0
 		for j in range (len(cloud[i])):
-			print("    ==> et ", len(cloud[i][j]), " sous éléments")
+			print("    ==> et ", len(cloud[i][j]), " sous elements")
 			print(cloud[i][j])
