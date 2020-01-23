@@ -2,7 +2,7 @@
 # @Author: Baptiste Bertrand-Rapello
 # @Date:   2019-09-24 16:51:33
 # @Last Modified by:   Baptiste Bertrand-Rapello
-# @Last Modified time: 2019-09-24 17:21:58
+# @Last Modified time: 2020-01-23 16:06:40
 
 import random
 
@@ -94,4 +94,3 @@ def test():
 	perlin.perlinsCloud(16, 10, 1, 5)
 
 
-test()

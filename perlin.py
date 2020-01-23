@@ -1,9 +1,17 @@
+# -*- coding: utf-8 -*-
+# @Author: Baptiste Bertrand-Rapello
+# @Date:   2019-09-24 17:14:46
+# @Last Modified by:   Baptiste Bertrand-Rapello
+# @Last Modified time: 2020-01-23 16:09:21
+
 #!/usr/bin/env python3
+
 import random
 import perlin_extra as extra
 import writeIntoCSV as wif #Wrtie into file
 #import perlinCloud as perlin
-import * from  perlinCloud
+from perlinCloud import *
+from PIL import Image
 
 
 #MasterCloud = []#
@@ -79,14 +87,12 @@ import * from  perlinCloud
 #	for j in range (step):
 #		print("Master cloud step : ", j)
 #		print(MasterCloud[j])
-
 def main():
-
+	print("here is where the magic happen")
+	test()
 	#perlinsCloud(16, 10, 1, 5)
-
 	#extra.testImportFunction()
 	#wif.writeToFile(MasterCloud, "perlin-out-bis")
 	#extra.printTheCloud(MasterCloud)
-
 
 main()
