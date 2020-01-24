@@ -2,7 +2,7 @@
 # @Author: Baptiste Bertrand-Rapello
 # @Date:   2020-01-23 16:13:37
 # @Last Modified by:   Baptiste Bertrand-Rapello
-# @Last Modified time: 2020-01-23 17:38:03
+# @Last Modified time: 2020-01-24 14:04:40
 
 #! /bin/python3
 
@@ -90,13 +90,15 @@ def createTwoLayer():
 	print(lstOne)
 	print(lstTwo)
 
+
+
 def main():
 	print("here is where the magic happen")
 	img = createAPic()
-	drawOnPict(img)
+	#drawOnPict(img)
 	lstTwo = createTwoLayer()
 	#myDraw(img)
-	#myDrawRand(img)
+	myDrawRand(img)
 	show_save(img, "toto", "png")
 
 main()
