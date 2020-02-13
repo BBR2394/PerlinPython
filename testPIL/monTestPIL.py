@@ -2,7 +2,7 @@
 # @Author: Baptiste Bertrand-Rapello
 # @Date:   2020-01-23 16:13:37
 # @Last Modified by:   Baptiste Bertrand-Rapello
-# @Last Modified time: 2020-01-24 14:04:40
+# @Last Modified time: 2020-02-13 10:38:59
 
 #! /bin/python3
 
@@ -64,6 +64,7 @@ def myDraw(pict):
 		PXL = 0
 		sens = True
 
+#uniform c'est la fonction de generateur de nombre aleatoire
 def myDrawRand(pict):
 	draw = ImageDraw.Draw(pict)
 	PXL = int(uniform(0, 255))
@@ -91,14 +92,52 @@ def createTwoLayer():
 	print(lstTwo)
 
 
+def drawTheDoubleTab(tab, pict):
+	draw = ImageDraw.Draw(pict)
+	for j in range (0, height):
+		for i in range (0, width):
+			tPXL = (tab[j][i],tab[j][i],tab[j][i])
+			draw.point((i, j), fill=tPXL)
+
+def firstLayerTotalRand():
+	tab = [[]]
+	for j in range (0, height):
+		for i in range (0, width):
+			aPXL = int(uniform(0, 255))
+			tab[j].append(aPXL)
+		#print("a line of pxl : ", tab[j])
+		tab.append([])
+	print("infirst layer total rand : ", tab)
+	return tab
+
+#quand j'extrapole entre deux point separé de 5 pixel
+def layerFive():
+	print("->dans layer five")
+	tab = []
+	aPXL = int(uniform(0, 255))
+	tab.append(aPXL)
+	for i in range (1, int(width/5)):
+		aPXL = int(uniform(0, 255))
+		tab.append(aPXL)
+	print("a line of pxl : ", tab[j])
+	tab.append([])
+		
+	print("infirst layer total rand : ", tab)
+	return tab
+
 
 def main():
 	print("here is where the magic happen")
 	img = createAPic()
 	#drawOnPict(img)
-	lstTwo = createTwoLayer()
+	tabOne = firstLayerTotalRand()
+	layerFive()
+	drawTheDoubleTab(tabOne, img)
+	
+
+	#lstTwo = createTwoLayer()
 	#myDraw(img)
-	myDrawRand(img)
+	#myDrawRand(img)
 	show_save(img, "toto", "png")
 
 main()

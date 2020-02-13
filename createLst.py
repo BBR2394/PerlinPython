@@ -2,7 +2,7 @@
 # @Author: Baptiste Bertrand-Rapello
 # @Date:   2020-01-24 10:15:51
 # @Last Modified by:   Baptiste Bertrand-Rapello
-# @Last Modified time: 2020-01-24 14:07:49
+# @Last Modified time: 2020-01-25 16:37:54
 
 from PIL import Image, ImageDraw
 from random import uniform, random
@@ -74,7 +74,7 @@ def	createList(size):
 			while c <= size:
 				temp[c] = int(uniform(1, 255))
 				c += int(size/level)
-			temp = extrapolTheLine(temp, size)
+			#temp = extrapolTheLine(temp, size)
 			lstgen.append(temp)
 		level -= 1
 	final_line = fusionLine(lstgen)
